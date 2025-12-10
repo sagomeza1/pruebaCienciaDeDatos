@@ -1,0 +1,9 @@
+{
+  "products": 800,
+  "stores": 150,
+  "customers": 20000,
+  "transactions": 100168,
+  "inventory": 37500,
+  "promotions": 220,
+  "labels": 20000
+}

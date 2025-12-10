@@ -1,0 +1,22 @@
+pipeline:
+  name: "rfm_churn_prediction"
+  version: "1.0"
+
+paths:
+  raw_data: "/Volumes/workspace/default/prueba/data/raw/"  # Ruta en Databricks (Data Lake)
+  gold_data: "/Volumes/workspace/default/prueba/data/gold/features/"
+  output_model: "/Volumes/workspace/default/prueba/models/rfm_classifier"
+
+parameters:
+  date_train_cutoff: "2025-07-31"
+  date_val_cutoff: "2025-10-31"
+  model_params:
+    criterion: "entropy"
+    max_depth: 10
+  
+  thresholds:
+    min_accuracy: 0.75
+
+model_registry:
+  model_name: "Customer_Reorder_RFM"
+  stage: "Staging"
